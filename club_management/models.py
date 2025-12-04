@@ -16,7 +16,7 @@ def validate_phone(value):
 
 
 class Member(models.Model):
-    member_id = models.IntegerField(primary_key=True)
+    member_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     age = models.IntegerField(validators=[
@@ -30,7 +30,7 @@ class Member(models.Model):
         db_table = 'club_member'
 
 class Activity (models.Model):
-    act_Code = models.IntegerField(primary_key=True)
+    act_Code = models.AutoField(primary_key=True)
     act_Name = models.CharField(max_length=255)
     monthly_fee = models.DecimalField(
         max_digits=10,
